@@ -15,3 +15,16 @@ Temas escolhido para desenvolvimento:
 
 <b> Funerárias <b>. <br>
 
+<h2>Autores<h2>
+  
+  <br><br>
+  
+  <b> Caio Cassiano <b/>.
+    <br>
+   <br>David Coelho <b/>.
+    <br>
+    <b>Enrik Magalhães<b/>.
+      <br>
+      <b>Leila Kessia<b/>.
+        <br>
+        <b>Rogério Junior<b/>.
