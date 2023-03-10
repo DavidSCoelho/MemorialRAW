@@ -19,9 +19,9 @@ Temas escolhido para desenvolvimento:
   
   <br><br>
   
-  <b> Caio Cassiano <b>.
+  <b> Caio Cassiano<b>.
     <br>
-   <b>David Coelho <b/>.
+   <b>David Coelho<b/>.
    <br>
     <b>Enrik Magalhães<b/>.
       <br>
