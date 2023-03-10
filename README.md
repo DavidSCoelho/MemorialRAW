@@ -22,7 +22,7 @@ Temas escolhido para desenvolvimento:
   <b> Caio Cassiano <b/>.
     <br>
    <br>David Coelho <b/>.
-    <br>
+   
     <b>Enrik Magalhães<b/>.
       <br>
       <b>Leila Kessia<b/>.
