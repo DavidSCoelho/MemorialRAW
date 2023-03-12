@@ -28,3 +28,6 @@ Temas escolhido para desenvolvimento:
       <b>Leila Kessia<b/>.
         <br>
         <b>Rogério Junior<b/>.
+
+Aparência prévia da página inicial do sistema:
+![image](https://user-images.githubusercontent.com/100362679/224580875-02584108-c11d-4ac3-ac25-acf9a26b2bb7.png)
