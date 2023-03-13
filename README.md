@@ -30,4 +30,4 @@ Temas escolhido para desenvolvimento:
         <b>Rogério Junior<b/>.
 
 Aparência prévia da página inicial do sistema:
-![image](https://user-images.githubusercontent.com/100362679/224580875-02584108-c11d-4ac3-ac25-acf9a26b2bb7.png)
+![image](https://user-images.githubusercontent.com/100362679/224611589-bead08a2-dabf-43f9-b67a-25c388b140ab.png)
