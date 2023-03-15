@@ -1,0 +1,69 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<!--MENU DE NAVEGAÇÃO DAS PÁGINAS-->
+<button class="btn btn-dark btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+  aria-controls="offcanvasExample" style="margin: 16px;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list"
+    viewBox="0 0 16 16">
+    <path fill-rule="evenodd"
+      d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+  </svg> Menu
+</button>
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <ul class="list-group">
+        <a class="list-group-item list-group-item-action" href="/">Início</a>
+        <a class="list-group-item list-group-item-action" href="/cadastroCliente">Cadastrar novo cliente</a>
+        <a class="list-group-item list-group-item-action" href="/listarTodosClientes">Ver todos os clientes</a>
+      </ul>
+    </div>
+    <div class="dropdown mt-3">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Buscar serviço</h5>
+      <form class="d-flex" action="/buscandoLocacao/" method="post">
+
+        <input class="form-control me-2" type="text" name="nome" id="nome" placeholder="Pesquise pelo #nome">
+
+        <input class="btn btn-outline-success" type="submit" value="Buscar">
+      </form>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+
+<h1>Editar dados do cliente</h1>
+    <hr>
+    <form action="/detalheIndividualCliente/updateprod" method="POST">
+        <div class="form-group">
+            <input type="hidden" name="id" id="id" value="{{prod.id}}">
+            <label for="nomecliente">Nome:</label>
+            <input type="text" name="nomecliente" id="nomecliente" placeholder="Digite o nome do produto" value="{{prod.nome}}" class="form-control">
+        </div>
+
+            <div class="form-group">
+            <label for="cpfcliente">CPF:</label>
+            <input type="text" name="cpfcliente" placeholder="Digite seu cpf" value="{{prod.cpf}}" class="form-control">
+        </div>
+
+    <div class="form-group">
+            <label for="idadecliente">Idade:</label>
+            <input type="number" name="idadecliente" placeholder="Digite sua idade" value="{{prod.idade}}" class="form-control">
+        </div>
+
+            <div class="form-group">
+            <label for="telefonecliente">telefone:</label>
+            <input type="text" name="telefonecliente" placeholder="Digite seu telefone" value="{{prod.telefone}}" class="form-control">
+        </div>
+        <input type="submit" value="Editar" class="btn btn-outline-success btn-lg">
+    </form>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>

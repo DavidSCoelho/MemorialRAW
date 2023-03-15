@@ -1,0 +1,65 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema Gerenciador de Serviços Funerários</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+  <!--MENU DE NAVEGAÇÃO DAS PÁGINAS-->
+  <button class="btn btn-dark btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+    aria-controls="offcanvasExample" style="margin: 16px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list"
+      viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+    </svg> Menu
+  </button>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <ul class="list-group">
+          <a class="list-group-item list-group-item-action" href="/">Início</a>
+          <a class="list-group-item list-group-item-action" href="/cadastrarNovoServico">Cadastrar novo serviço</a>
+          <a class="list-group-item list-group-item-action" href="/exibirTodosServicos">Ver todos os serviços</a>
+        </ul>
+      </div>
+      <div class="dropdown mt-3">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Buscar locação</h5>
+        <form class="d-flex" action="/buscandoLocacao/" method="post">
+
+          <input class="form-control me-2" type="text" name="nome" id="nome" placeholder="Pesquise pelo #nome">
+
+          <input class="btn btn-outline-success" type="submit" value="Buscar">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+
+<h1>Buscar Serviço</h1>
+
+    <hr>
+    <form action="/buscandoServico/" method="post">
+        
+            <input type="text" name="nome" id="nome" placeholder="Pesquise pelo #nome">
+              
+        <input type="submit" value="Buscar">
+    </form>
+
+    <footer>
+  <p>&copy;2023 Sistema Gerenciador de Serviços Funerários - Programadores Cariocas</p>
+</footer>

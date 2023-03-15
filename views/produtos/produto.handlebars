@@ -1,0 +1,118 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema Gerenciador de Serviços Funerários</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!--MENU DE NAVEGAÇÃO DAS PÁGINAS-->
+  <button class="btn btn-dark btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+    aria-controls="offcanvasExample" style="margin: 16px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list"
+      viewBox="0 0 16 16">
+      <path fill-rule="evenodd"
+        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+    </svg> Menu
+  </button>
+
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div>
+        <ul class="list-group">
+          <a class="list-group-item list-group-item-action" href="/">Início</a>
+          <a class="list-group-item list-group-item-action" href="/cadastro_prod">Cadastrar novo
+            produto</a>
+          <a class="list-group-item list-group-item-action" href="/produto">Ver todos os
+            produtos</a>
+        </ul>
+      </div>
+      <div class="dropdown mt-3">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Buscar produto</h5>
+        <form class="d-flex" action="/buscandoLocacao/" method="post">
+
+          <input class="form-control me-2" type="text" name="nome" id="nome" placeholder="Pesquise pelo #nome">
+
+          <input class="btn btn-outline-success" type="submit" value="Buscar">
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--
+  <summary>
+    <strong>
+      <h1>Seçao de Produtos</h1>
+    </strong>
+    <hr>
+    <ul>
+      <li><a href="/">Início</a></li>
+      <li><a href="/produto">Produtos</a> </li>
+      <li><a href="/buscando_produto">Buscar Produtos</a></li>
+      <li><a href="/cadastro_prod">Cadastrar Produtos</a></li>
+    </ul>
+  </summary>-->
+  <hr>
+  <h1 style="text-align: center;"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+      class="bi bi-file-text" viewBox="0 0 16 16">
+      <path
+        d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z" />
+      <path
+        d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z" />
+    </svg>Produto</h1>
+
+  <div class="card" style="padding: 16px; margin: 16px 96px 16px 96px; text-align: center;">
+    <h1 class="display-2"> {{listarProd.nome}} </h1>
+
+    <br />
+
+    <p class="display-6">Este item tem <span class="badge bg-success">{{listarProd.qtd}}</span> unidades em estoque</p>
+
+    <br />
+
+    <div class="d-grid gap-2 d-md-block">
+      <a class="btn btn-warning" href="/produto/edit/{{listarProd.id}}">Editar</a>
+      <a class="btn btn-danger" href="/produto/remove/{{listarProd.id}}">Excluir</a>
+    </div>
+  </div>
+
+  <hr />
+
+  <footer class="rodape">
+    <p>&copy;2023 Sistema Gerenciador de Serviços Funerários - Programadores
+      Cariocas</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <style>
+    .principal {
+      margin: 0 80px 0 80px;
+    }
+
+    .titulo {
+      text-align: center;
+    }
+
+    .card {
+      background-color: rgb(247, 240, 255);
+    }
+
+    .rodape {
+      text-align: center;
+    }
+  </style>
+
+</body>
+
+</html>

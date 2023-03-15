@@ -1,0 +1,133 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema Gerenciador de Serviços Funerários</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!--MENU DE NAVEGAÇÃO DAS PÁGINAS-->
+    <button class="btn btn-dark btn-lg" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+        aria-controls="offcanvasExample" style="margin: 16px;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg> Menu
+    </button>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div>
+                <ul class="list-group">
+                    <a class="list-group-item list-group-item-action" href="/">Início</a>
+                    <a class="list-group-item list-group-item-action" href="/cadastro_prod">Cadastrar novo
+                        produto</a>
+                    <a class="list-group-item list-group-item-action" href="/produto">Ver todos os
+                        produtos</a>
+                </ul>
+            </div>
+            <div class="dropdown mt-3">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Buscar produto</h5>
+                <form class="d-flex" action="/buscandoLocacao/" method="post">
+
+                    <input class="form-control me-2" type="text" name="nome" id="nome"
+                        placeholder="Pesquise pelo #nome">
+
+                    <input class="btn btn-outline-success" type="submit" value="Buscar">
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- [[LEGADO]]
+    <hr />
+
+    <summary>
+        <strong>
+            <h1>Seçao de Produtos</h1>
+        </strong>
+        <hr>
+        <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/produto">Produtos</a> </li>
+            <li><a href="/buscando_produto">Buscar Produtos</a></li>
+            <li><a href="/cadastro_prod">Cadastrar Produtos</a></li>
+        </ul>
+    </summary>-->
+    <hr>
+    <h1 class="titulo"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+            class="bi bi-plus-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+            <path
+                d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+        </svg> Cadastro de Produtos</h1>
+    <hr>
+    <form action="prod/insertprod" method="POST">
+        <div class="mb-3 formulario">
+            <div class="form-control">
+                <input type="hidden" name="id" id="id">
+                <label class="form-label" for="nome">Nome:</label>
+                <input class="form-control" type="text" name="nome" placeholder="Digite o nome do produto">
+            </div>
+
+            <div class="form-control">
+                <label class="form-label" for="quant">Quantidade:</label>
+                <input class="form-control" type="number" name="qtd" placeholder="Digite a quantidade em estoque">
+            </div>
+            <div class="form-control">
+                <label class="form-label" for="quant">Fornecedor:</label>
+                <input class="form-control" type="text" name="fornecedor" placeholder="Digite o nome do fornecedor">
+            </div>
+
+            <br />
+
+            <input type="submit" class="btn btn-outline-success btn-lg" value="Cadastrar">
+        </div>
+    </form>
+    
+    
+    <hr />
+
+
+    <footer class="rodape">
+        <p>&copy;2023 Sistema Gerenciador de Serviços Funerários - Programadores Cariocas</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+
+    <style>
+        small {
+            color: white;
+        }
+
+        .titulo {
+            text-align: center;
+        }
+
+        .formulario {
+            margin: 0 80px 24px 80px;
+            background-color: rgb(247, 240, 255);
+            padding: 16px;
+        }
+
+        .rodape {
+            text-align: center;
+            margin: 24px;
+        }
+    </style>
+
+</body>
+
+</html>
